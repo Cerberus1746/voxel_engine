@@ -5,32 +5,22 @@
     <Language>CSharp</Language>
     <Entities>
       <Entity type="Class">
-        <Name>Vector</Name>
+        <Name>Voxel</Name>
         <Access>Public</Access>
-        <Location left="247" top="153" />
-        <Size width="162" height="216" />
+        <Location left="572" top="150" />
+        <Size width="201" height="216" />
         <Collapsed>False</Collapsed>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>Vector1</Name>
-        <Access>Public</Access>
-        <Location left="563" top="153" />
-        <Size width="162" height="216" />
-        <Collapsed>False</Collapsed>
-        <Member type="Property">public float x { get; set; }</Member>
+        <Member type="Field">Color color</Member>
+        <Member type="Field">private Vector3 vector</Member>
+        <Member type="Property">public float X { get; set; }</Member>
+        <Member type="Property">public float Y { get; set; }</Member>
+        <Member type="Property">public float Z { get; set; }</Member>
+        <Member type="Constructor">public Voxel()</Member>
+        <Member type="Method">public Vector3 GetVector()</Member>
+        <Member type="Method">public void SetVector(Vector3 vector)</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
-    <Relationships>
-      <Relationship type="Association" first="0" second="1">
-        <Label>
-        </Label>
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-    </Relationships>
+    <Relationships />
   </ProjectItem>
 </Project>
