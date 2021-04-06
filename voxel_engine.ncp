@@ -1,26 +1,321 @@
 <Project>
-  <Name>Voxel Engine</Name>
+  <Name>VoxelEngine</Name>
   <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
-    <Name>Voxel</Name>
+    <Name>Geometry</Name>
     <Language>CSharp</Language>
     <Entities>
       <Entity type="Class">
         <Name>Voxel</Name>
         <Access>Public</Access>
-        <Location left="572" top="150" />
-        <Size width="201" height="216" />
+        <Location left="588" top="660" />
+        <Size width="201" height="230" />
         <Collapsed>False</Collapsed>
         <Member type="Field">Color color</Member>
-        <Member type="Field">private Vector3 vector</Member>
-        <Member type="Property">public float X { get; set; }</Member>
+        <Member type="Field">Edge[] edges</Member>
+        <Member type="Field">Face[] faces</Member>
+        <Member type="Field">Vertex[] vertices</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Vertex</Name>
+        <Access>Public</Access>
+        <Location left="47" top="349" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public Vector3 GetNormal()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Position</Name>
+        <Access>Public</Access>
+        <Location left="588" top="349" />
+        <Size width="211" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Position()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Edge</Name>
+        <Access>Public</Access>
+        <Location left="47" top="660" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Vertex[] vertices</Member>
+        <Member type="Method">public Vertex FirstVertex()</Member>
+        <Member type="Method">public Vector3 GetCenter()</Member>
+        <Member type="Method">public Vector3 GetNormal()</Member>
+        <Member type="Method">public Vertex SecondVertex()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>There will be only Tris, no Quads</Text>
+        <Location left="287" top="770" />
+        <Size width="108" height="50" />
+      </Entity>
+      <Entity type="Class">
+        <Name>Cube</Name>
+        <Access>Public</Access>
+        <Location left="588" top="940" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Sphere</Name>
+        <Access>Public</Access>
+        <Location left="815" top="952" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GameObject</Name>
+        <Access>Public</Access>
+        <Location left="588" top="33" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Voxel[] voxels</Member>
+        <Member type="Method">public Voxel[] GetAllVoxels()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ColorRGBA</Name>
+        <Access>Public</Access>
+        <Location left="1388" top="33" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int A { get; set; }</Member>
+        <Member type="Constructor">public ColorRGBA()</Member>
+        <Member type="Method">public int GetAlpha()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ColorRGB</Name>
+        <Access>Public</Access>
+        <Location left="1388" top="349" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int B { get; set; }</Member>
+        <Member type="Property">public int G { get; set; }</Member>
+        <Member type="Property">public int R { get; set; }</Member>
+        <Member type="Constructor">public ColorRGB()</Member>
+        <Member type="Method">public int GetBlue()</Member>
+        <Member type="Method">public int GetGreen()</Member>
+        <Member type="Method">public int GetRed()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ColorBW</Name>
+        <Access>Public</Access>
+        <Location left="1622" top="349" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int Black</Member>
+        <Member type="Property">public int K { get; set; }</Member>
+        <Member type="Constructor">public ColorBW()</Member>
+        <Member type="Method">public int GetBlack()</Member>
+        <Member type="Method">public void SetBlack(int black)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Color</Name>
+        <Access>Public</Access>
+        <Location left="1388" top="660" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected int[] values</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Face</Name>
+        <Access>Public</Access>
+        <Location left="47" top="940" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Vertex[] vertices</Member>
+        <Member type="Method">public Vector3 GetMiddlePoint()</Member>
+        <Member type="Method">public Vector3 GetNormal()</Member>
+        <Member type="Method">public Vector3 GetCenter()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ColorBWA</Name>
+        <Access>Public</Access>
+        <Location left="1622" top="33" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int Alpha</Member>
+        <Member type="Constructor">public ColorBWA()</Member>
+        <Member type="Method">public int GetAlpha()</Member>
+        <Member type="Method">public void SetAlpha(int black)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>K is black because of CMYK</Text>
+        <Location left="1878" top="349" />
+        <Size width="160" height="75" />
+      </Entity>
+      <Entity type="Class">
+        <Name>Vector2</Name>
+        <Access>Public</Access>
+        <Location left="996" top="660" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
         <Member type="Property">public float Y { get; set; }</Member>
+        <Member type="Constructor">public Vector2()</Member>
+        <Member type="Method">public float GetY()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Vector1</Name>
+        <Access>Public</Access>
+        <Location left="996" top="952" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public float X { get; set; }</Member>
+        <Member type="Constructor">public Vector1()</Member>
+        <Member type="Method">public float GetX()</Member>
+        <Member type="Method">public void SetX(float X)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Vector</Name>
+        <Access>Public</Access>
+        <Location left="996" top="1245" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected float[] values</Member>
+        <Member type="Constructor">public Vector()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Vector4</Name>
+        <Access>Public</Access>
+        <Location left="996" top="33" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public float W { get; set; }</Member>
+        <Member type="Constructor">public Vector4()</Member>
+        <Member type="Method">public float GetW()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Vector3</Name>
+        <Access>Public</Access>
+        <Location left="996" top="349" />
+        <Size width="201" height="230" />
+        <Collapsed>False</Collapsed>
         <Member type="Property">public float Z { get; set; }</Member>
-        <Member type="Constructor">public Voxel()</Member>
-        <Member type="Method">public Vector3 GetVector()</Member>
-        <Member type="Method">public void SetVector(Vector3 vector)</Member>
+        <Member type="Constructor">public Vector3()</Member>
+        <Member type="Method">public float GetZ()</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
-    <Relationships />
+    <Relationships>
+      <Relationship type="Generalization" first="1" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>317</X>
+          <Y>466</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>537</X>
+          <Y>466</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Comment" first="4" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>425</X>
+          <Y>802</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>557</X>
+          <Y>802</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>897</X>
+          <Y>927</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>814</X>
+          <Y>835</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>670</X>
+          <Y>317</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="9">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="9" second="11">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="10" second="11">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1614</X>
+          <Y>737</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="13" second="10">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="0" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Comment" first="14" second="10">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="18" second="19">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="19" second="15">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="15" second="16">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="16" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="19">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1268</X>
+          <Y>1347</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
   </ProjectItem>
 </Project>

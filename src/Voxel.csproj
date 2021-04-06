@@ -60,10 +60,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GeometricMath\Vector.cs" />
-    <Compile Include="GeometricMath\Vector1.cs" />
-    <Compile Include="GeometricMath\Vector2.cs" />
-    <Compile Include="GeometricMath\Vector3.cs" />
+    <Compile Include="SpatialMath\Vector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

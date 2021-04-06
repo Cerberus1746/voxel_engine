@@ -7,3 +7,5 @@
 /src/bin
 /src/obj
 *.csproj.user
+/test_voxel/bin
+/test_voxel/obj
