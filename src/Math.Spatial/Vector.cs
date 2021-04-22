@@ -51,7 +51,8 @@ namespace VoxelEngine.Spatial
       set => this[AxisToIndex(index)] = value;
     }
 
-    private static int AxisToIndex(string axis) {
+    private static int AxisToIndex(string axis)
+    {
       return axis switch
       {
         "x" or "X" => 0,

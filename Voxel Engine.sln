@@ -6,7 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BF11277-BE5B-4B0E-BC57-37A2B8FC377C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		voxel_engine_test\voxel_engine_test.csproj = voxel_engine_test\voxel_engine_test.csproj
+		omnisharp.json = omnisharp.json
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test_voxel", "test_voxel\test_voxel.csproj", "{33710237-8E13-4396-9FD4-4EF4C7986AF2}"

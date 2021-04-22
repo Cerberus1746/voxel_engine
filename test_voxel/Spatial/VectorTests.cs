@@ -2,14 +2,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VoxelEngine.Spatial;
 using System;
 
-namespace test_voxel
-{
+namespace test_voxel {
   [TestClass]
-  public class SpatialTests
-  {
+  public class VectorTests {
     [TestMethod]
-    public void TestVectorCreationAndSetterGetter()
-    {
+    public void TestVectorCreationAndSetterGetter() {
       Vector newVector1 = Vector.D1(5);
       Vector newVector2 = Vector.D2(5, 7);
       Vector newVector3 = Vector.D3(5, 7, 2);
@@ -32,8 +29,7 @@ namespace test_voxel
     }
 
     [TestMethod]
-    public void VectorMagnitude()
-    {
+    public void VectorMagnitude() {
       Vector testVector;
 
       testVector = Vector.D2(0, 0);
@@ -50,8 +46,7 @@ namespace test_voxel
     }
 
     [TestMethod]
-    public void VectorNormalization()
-    {
+    public void VectorNormalization() {
       Vector testVector;
       Vector normalizedVector;
 
