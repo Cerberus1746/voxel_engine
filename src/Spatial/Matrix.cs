@@ -1,28 +1,56 @@
 using System;
 
 namespace VoxelEngine.Spatial {
-  class Matrix {
-    private readonly Vector[] values;
+  public class Matrix {
+    public int LengthX {
+      get => values.GetLength(0);
+    }
+    public int LengthY {
+      get => values.GetLength(1);
+    }
+    private readonly double[,] values;
 
-    public Matrix(Vector[] values) => this.values = values;
+    public Matrix(double[,] values) => this.values = values;
+    /*public Matrix(Vector[] values) {
+      int curLen;
 
-    public static Matrix Zero(int x, int y) {
-      Vector[] values = new Vector[y];
-      for (int i = 0; i < y; i++) {
-        values[i] = Vector.Zero(x);
+      for (int x = 0; x < values.Length; x++) {
+        curLen = values.Length;
+
+        for (int y = 0; y < curLen; y++) {
+
+        }
       }
-      return new(values);
-    }
-
+    }*/
+    public static Matrix Zero(int x, int y) => new(new double[x, y]);
+    // # Indexing START #
+    // ##################
     public double this[int x, int y] {
-      get => this.values[y][x];
-      set => this.values[y][x] = value;
+      get => values[y, x];
+      set => values[y, x] = value;
     }
 
-    public Vector this[int y] {
-      get => this.values[y];
-      set => this.values[y] = value;
+    public Vector GetRow(int rowIndex) {
+      double[] row = new double[LengthX];
+
+      for (int i = 0; i < LengthY; i++) {
+        row[i] = values[rowIndex, i];
+      }
+
+      return new Vector(row);
     }
+
+    public Vector GetCol(int colIndex) {
+      double[] col = new double[LengthY];
+
+      for (int i = 0; i < LengthX; i++) {
+        col[i] = values[colIndex, i];
+      }
+
+      return new Vector(col);
+    }
+    // # Indexing END #
+    // ##################
 
     public static Matrix M3RotateX(double angle) {
       Matrix rotationMatrix = Matrix.Zero(3, 3);

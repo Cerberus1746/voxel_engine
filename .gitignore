@@ -6,7 +6,6 @@
 /Backup
 
 *.csproj.user
-/test_voxel/bin
-/test_voxel/obj
-/src/Math.Spatial/bin/
-/src/Math.Spatial/obj
+
+bin/
+obj/

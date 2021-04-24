@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Math.Spatial\Spatial.csproj" />
+    <ProjectReference Include="..\..\src\Spatial\Spatial.csproj" />
   </ItemGroup>
 
 </Project>

@@ -76,5 +76,35 @@ namespace test_voxel {
       Assert.AreEqual(Math.Round(normalizedVector.Y, 2), -0.25);
       Assert.AreEqual(Math.Round(normalizedVector.Z, 2), 0.37);
     }
+
+    [TestMethod]
+    public void VectorRounding() {
+      Vector newVector3 = Vector.D3(5.3, 7.9, 2.1);
+      Vector roundedVector3 = newVector3.Round();
+
+      Assert.AreEqual(roundedVector3.GetX(), 5);
+      Assert.AreEqual(roundedVector3.GetY(), 8);
+      Assert.AreEqual(roundedVector3.GetZ(), 2);
+    }
+
+    [TestMethod]
+    public void VectorFlooring() {
+      Vector newVector3 = Vector.D3(5.3, 7.9, 2.1);
+      Vector roundedVector3 = newVector3.Floor();
+
+      Assert.AreEqual(roundedVector3.GetX(), 5);
+      Assert.AreEqual(roundedVector3.GetY(), 7);
+      Assert.AreEqual(roundedVector3.GetZ(), 2);
+    }
+
+    [TestMethod]
+    public void VectorCeiling() {
+      Vector newVector3 = Vector.D3(5.3, 7.9, 2.1);
+      Vector roundedVector3 = newVector3.Ceiling();
+
+      Assert.AreEqual(roundedVector3.GetX(), 6);
+      Assert.AreEqual(roundedVector3.GetY(), 8);
+      Assert.AreEqual(roundedVector3.GetZ(), 3);
+    }
   }
 }
