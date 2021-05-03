@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using VoxelEngine.Graphics;
 
 namespace VoxelEditor {
@@ -6,7 +6,7 @@ namespace VoxelEditor {
     static MainWindow mainWindow;
 
     static void Main() {
-      mainWindow = new MainWindow("Voxel Editor", 10, 10, 800, 600);
+      mainWindow = new MainWindow("Voxel Editor", 800, 600);
       mainWindow.Run();
     }
   }
