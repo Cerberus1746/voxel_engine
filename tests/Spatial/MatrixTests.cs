@@ -1,23 +1,27 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using VoxelEngine.Spatial;
-using System;
 using System.Numerics;
+using VoxelEngine.Spatial;
 
-namespace Tests.Generics {
-    [TestClass]
-    public class VectorTests {
-        [TestMethod]
-        public void QuaternionRotation() {
-            Matrix4x4 testMatrix;
-            Quaternion testRot;
+namespace Tests.Generics
+{
+  [TestClass]
+  public class VectorTests
+  {
+    [TestMethod]
+    public void QuaternionRotation() {
+      Matrix4x4 testMatrix;
+      Quaternion testRot;
+      Vector3 rotVector;
 
-            testRot = new(new Vector3(1, 1, 0), 0);
-            testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
-            Assert.AreEqual(testMatrix.GetQuaternionRotation(), testRot);
+      rotVector = new(1, 1, 0);
+      testRot = new(rotVector, 0);
+      testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
+      Assert.AreEqual(testRot, testMatrix.GetQuaternionRotation());
 
-            testRot = new(new Vector3(-1, -1, -2), 0);
-            testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
-            Assert.AreEqual(testMatrix.GetQuaternionRotation(), testRot);
-        }
+      rotVector = new(0.5f, 0.5f, -0.5f);
+      testRot = new(rotVector, 0);
+      testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
+      Assert.AreEqual(testRot, testMatrix.GetQuaternionRotation());
     }
+  }
 }

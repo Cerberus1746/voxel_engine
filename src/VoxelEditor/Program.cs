@@ -6,7 +6,7 @@ namespace VoxelEditor {
     static MainWindow mainWindow;
 
     static void Main() {
-      mainWindow = new MainWindow("Voxel Editor", 800, 600);
+      mainWindow = new MainWindow(800, 600, "Voxel Editor");
       mainWindow.Run();
     }
   }

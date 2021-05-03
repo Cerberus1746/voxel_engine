@@ -1,6 +1,6 @@
-using System;
-
-namespace VoxelEngine.Scene {
-  public class Scene {
+namespace VoxelEngine.Scene
+{
+  public class Scene
+  {
   }
 }

@@ -1,31 +1,25 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BF11277-BE5B-4B0E-BC57-37A2B8FC377C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		omnisharp.json = omnisharp.json
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Spatial", "tests\Spatial\Tests.Spatial.csproj", "{33710237-8E13-4396-9FD4-4EF4C7986AF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Graphics", "src\Graphics\VoxelEngine.Graphics.csproj", "{CBA9686C-576D-441F-9B56-6B796DDDF213}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Spatial", "src\Spatial\VoxelEngine.Spatial.csproj", "{7AA2BCE0-A7EC-4789-BFC5-E47573950F78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Editor", "src\VoxelEditor\VoxelEngine.Editor.csproj", "{2B3DFF85-A316-4E57-A686-5FBA44BB2B6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoxelEngine.Graphics", "src\Graphics\VoxelEngine.Graphics.csproj", "{CBA9686C-576D-441F-9B56-6B796DDDF213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Scene", "src\Scene\VoxelEngine.Scene.csproj", "{79A93096-D65A-4313-8866-DC8A50EECB15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoxelEngine.Editor", "src\VoxelEditor\VoxelEngine.Editor.csproj", "{2B3DFF85-A316-4E57-A686-5FBA44BB2B6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Physics", "src\Physics\VoxelEngine.Physics.csproj", "{175D3170-DFB8-48CF-80CE-C50429952CA6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6975DE20-A549-11EB-B401-89D5D26CFDE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.VoxelEngine", "tests\Tests.VoxelEngine.csproj", "{AC3E2C92-A0A0-44B2-92E6-2B5E50D3181D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoxelEngine.Scene", "src\Scene\VoxelEngine.Scene.csproj", "{79A93096-D65A-4313-8866-DC8A50EECB15}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoxelEngine.Physics", "src\Physics\VoxelEngine.Physics.csproj", "{175D3170-DFB8-48CF-80CE-C50429952CA6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Physics", "tests\Physics\Tests.Physics.csproj", "{BD270B7E-A2D6-4AAB-9590-5119757CCA97}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Generics", "tests\Generics\Tests.Generics.csproj", "{252E565E-30FE-470E-AC9C-A45BABEF34A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Spatial", "src\Spatial\VoxelEngine.Spatial.csproj", "{60363F25-4A3D-4F3C-9ED7-82DE538079E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,14 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{33710237-8E13-4396-9FD4-4EF4C7986AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33710237-8E13-4396-9FD4-4EF4C7986AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33710237-8E13-4396-9FD4-4EF4C7986AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33710237-8E13-4396-9FD4-4EF4C7986AF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AA2BCE0-A7EC-4789-BFC5-E47573950F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AA2BCE0-A7EC-4789-BFC5-E47573950F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AA2BCE0-A7EC-4789-BFC5-E47573950F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AA2BCE0-A7EC-4789-BFC5-E47573950F78}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBA9686C-576D-441F-9B56-6B796DDDF213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBA9686C-576D-441F-9B56-6B796DDDF213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBA9686C-576D-441F-9B56-6B796DDDF213}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,24 +43,19 @@ Global
 		{175D3170-DFB8-48CF-80CE-C50429952CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{175D3170-DFB8-48CF-80CE-C50429952CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{175D3170-DFB8-48CF-80CE-C50429952CA6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD270B7E-A2D6-4AAB-9590-5119757CCA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD270B7E-A2D6-4AAB-9590-5119757CCA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD270B7E-A2D6-4AAB-9590-5119757CCA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD270B7E-A2D6-4AAB-9590-5119757CCA97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{252E565E-30FE-470E-AC9C-A45BABEF34A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{252E565E-30FE-470E-AC9C-A45BABEF34A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{252E565E-30FE-470E-AC9C-A45BABEF34A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{252E565E-30FE-470E-AC9C-A45BABEF34A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC3E2C92-A0A0-44B2-92E6-2B5E50D3181D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC3E2C92-A0A0-44B2-92E6-2B5E50D3181D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC3E2C92-A0A0-44B2-92E6-2B5E50D3181D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC3E2C92-A0A0-44B2-92E6-2B5E50D3181D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BABB0E8C-2D86-4F99-A532-1E6EDBE94087}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{33710237-8E13-4396-9FD4-4EF4C7986AF2} = {6975DE20-A549-11EB-B401-89D5D26CFDE5}
-		{BD270B7E-A2D6-4AAB-9590-5119757CCA97} = {6975DE20-A549-11EB-B401-89D5D26CFDE5}
-		{252E565E-30FE-470E-AC9C-A45BABEF34A3} = {6975DE20-A549-11EB-B401-89D5D26CFDE5}
 	EndGlobalSection
 EndGlobal

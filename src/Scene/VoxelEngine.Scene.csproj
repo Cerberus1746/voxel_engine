@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
-    <ProjectReference Include="..\Spatial\VoxelEngine.Spatial.csproj" />
-    <ProjectReference Include="..\Graphics\VoxelEngine.Graphics.csproj" />
-  </ItemGroup>
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spatial\VoxelEngine.Spatial.csproj" />
+  </ItemGroup>
 
 </Project>

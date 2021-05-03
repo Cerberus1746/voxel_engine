@@ -2,8 +2,10 @@ using System;
 using System.Numerics;
 using VoxelEngine.Spatial;
 
-namespace VoxelEngine.Scene {
-  public class BasicObject {
+namespace VoxelEngine.Scene
+{
+  public class BasicObject
+  {
     public Matrix4x4 matrixWorld;
     public Matrix4x4 appliedForce;
     public float mass;
@@ -18,37 +20,37 @@ namespace VoxelEngine.Scene {
       set => matrixWorld *= Matrix4x4.CreateFromQuaternion(value);
     }
 
-    public void ApplyForce(Vector3 force, float time){
+    public void ApplyForce(Vector3 force, float time) {
       throw new NotImplementedException();
     }
 
     /// <summary>
     /// Apply the force using the time from the last physics frame
     /// </summary>
-    public void ApplyForce(Vector3 force){
+    public void ApplyForce(Vector3 force) {
       throw new NotImplementedException();
     }
 
-    public void ApplyForce(Vector3 force, float time, out Vector3 resultingPos){
+    public void ApplyForce(Vector3 force, float time, out Vector3 resultingPos) {
       throw new NotImplementedException();
     }
 
     /// <summary>
     /// Apply the force using the time from the last physics frame
     /// </summary>
-    public void ApplyForce(Vector3 force, out Vector3 resultingPos){
+    public void ApplyForce(Vector3 force, out Vector3 resultingPos) {
       throw new NotImplementedException();
     }
 
-    public void AddVelocity(Vector3 velocity, float time){
+    public void AddVelocity(Vector3 velocity, float time) {
       throw new NotImplementedException();
     }
 
-    public void GraphicsFrame(){
+    public void GraphicsFrame() {
       throw new NotImplementedException();
     }
 
-    public void PhysicsFrame(){
+    public void PhysicsFrame() {
       throw new NotImplementedException();
     }
   }
