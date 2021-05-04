@@ -25,6 +25,7 @@ jobs:
       run: |
         echo "Solution_Name=Voxel Engine.sln" >> $GITHUB_ENV
         echo "Test_Project_Path=tests/Tests.VoxelEngine.csproj" >> $GITHUB_ENV
+        echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
 
     # Install the .NET Core workload
     - name: Install .NET Core
