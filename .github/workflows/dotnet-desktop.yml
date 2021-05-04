@@ -13,6 +13,9 @@ jobs:
     strategy:
       matrix:
         configuration: [Debug, Release]
+    env:
+      Solution_Name: Voxel Engine.sln                        # Replace with your solution name, i.e. MyWpfApp.sln.
+      Test_Project_Path: tests/Tests.VoxelEngine.csproj  
 
     runs-on: windows-latest
     steps:
@@ -21,21 +24,15 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Setup Env Vars
-      run: |
-        echo "Solution_Name=Voxel Engine.sln" >> $GITHUB_ENV
-        echo "Test_Project_Path=tests/Tests.VoxelEngine.csproj" >> $GITHUB_ENV
-        echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
-
     # Install the .NET Core workload
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@master
       with:
         dotnet-version: 5.0.x
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@2008f912f56e61277eefaac6d1888b750582aa16
+      uses: microsoft/setup-msbuild@master
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
