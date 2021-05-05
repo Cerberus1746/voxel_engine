@@ -9,13 +9,5 @@
 * In the same light, existing formats shall be used instead for images, models and etc. Unless there's no format available for the thing I wanna do.
 * Everything needs to be multiplatform.
 
-# Source Summary
-```
-.
-+-- src
-|   +-- _Graphics
-|   +-- _Physics
-|   +-- _Scene
-|   +-- _Spatial
-|   +-- _VoxelEditor
-```
+# See Also
+* [OLD_BUGS.md](OLD_BUGS.md)

@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5BF11277-BE5B-4B0E-BC57-37A2B8FC377C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		PAST_ERRORS.md = PAST_ERRORS.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -13,13 +14,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Graphics", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Editor", "src\VoxelEditor\VoxelEngine.Editor.csproj", "{2B3DFF85-A316-4E57-A686-5FBA44BB2B6E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Scene", "src\Scene\VoxelEngine.Scene.csproj", "{79A93096-D65A-4313-8866-DC8A50EECB15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.SceneGraph", "src\SceneGraph\VoxelEngine.SceneGraph.csproj", "{79A93096-D65A-4313-8866-DC8A50EECB15}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Physics", "src\Physics\VoxelEngine.Physics.csproj", "{175D3170-DFB8-48CF-80CE-C50429952CA6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.VoxelEngine", "tests\Tests.VoxelEngine.csproj", "{AC3E2C92-A0A0-44B2-92E6-2B5E50D3181D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.Spatial", "src\Spatial\VoxelEngine.Spatial.csproj", "{60363F25-4A3D-4F3C-9ED7-82DE538079E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D9CE83C5-0CF9-43B5-9DFA-B851A5123FCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{FAD4BCFA-9A52-42BE-9FD8-E02876CF15C4}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet-desktop.yml = .github\workflows\dotnet-desktop.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VoxelEngine.InputHandling", "src\InputHandling\VoxelEngine.InputHandling.csproj", "{673D6D34-F8CC-4842-B2FE-7CFB952E59BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +61,17 @@ Global
 		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60363F25-4A3D-4F3C-9ED7-82DE538079E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{673D6D34-F8CC-4842-B2FE-7CFB952E59BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{673D6D34-F8CC-4842-B2FE-7CFB952E59BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{673D6D34-F8CC-4842-B2FE-7CFB952E59BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{673D6D34-F8CC-4842-B2FE-7CFB952E59BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9CE83C5-0CF9-43B5-9DFA-B851A5123FCD} = {5BF11277-BE5B-4B0E-BC57-37A2B8FC377C}
+		{FAD4BCFA-9A52-42BE-9FD8-E02876CF15C4} = {D9CE83C5-0CF9-43B5-9DFA-B851A5123FCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BABB0E8C-2D86-4F99-A532-1E6EDBE94087}

@@ -1,13 +1,18 @@
-using System;
+using System.Numerics;
 using VoxelEngine.Graphics;
 
-namespace VoxelEditor {
-  class Program {
-    static MainWindow mainWindow;
+namespace VoxelEditor
+{
+  internal class Program
+  {
 
-    static void Main() {
-      mainWindow = new MainWindow(800, 600, "Voxel Editor");
-      mainWindow.Run();
+    private static void Main() {
+      Vector2 mainWindowPosition = new(20, 20);
+      Vector2 mainWindowSize = new(800, 600);
+
+      using(MainWindow mainWindow = new(mainWindowPosition, mainWindowSize, "Voxel Editor")) {
+        mainWindow.Run();
+      }
     }
   }
 }
