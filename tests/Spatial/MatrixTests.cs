@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Numerics;
 using VoxelEngine.Spatial;
 
-namespace Tests.Generics
+namespace Tests.VoxelEngine.Spatial
 {
   [TestClass]
   public class VectorTests

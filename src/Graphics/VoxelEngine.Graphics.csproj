@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Veldrid.SPIRV" Version="1.0.14" />
-    <PackageReference Include="Veldrid.StartupUtilities" Version="4.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\InputHandling\VoxelEngine.InputHandling.csproj" />
     <ProjectReference Include="..\SceneGraph\VoxelEngine.SceneGraph.csproj" />
   </ItemGroup>

@@ -4,17 +4,17 @@ namespace VoxelEngine.Physics
 {
   public static class VectorExtension
   {
-    public static Vector3 GetAcceleration(
+    public static Vector3 ApplyAccelerationFromForce(
       this Vector3 vector,
       Vector3 force,
       float mass
-    ) => vector + Utils.GetForce(force, mass);
+    ) => vector + Utils.AccelerationFromForce(force, mass);
 
-    public static Vector3 GetAcceleration(
+    public static Vector3 ApplyAccelerationFromForce(
       this Vector3 vector,
       Vector3 force,
       float mass,
-      float time
-    ) => vector.GetAcceleration(force, mass) * time;
+      float deltaTime
+    ) => vector.ApplyAccelerationFromForce(force, mass) * deltaTime;
   }
 }

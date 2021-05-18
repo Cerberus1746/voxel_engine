@@ -1,0 +1,106 @@
+<mxfile host="Electron" modified="2021-05-15T23:55:38.464Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/14.6.13 Chrome/89.0.4389.128 Electron/12.0.7 Safari/537.36" etag="qCwXaO1E32wKNIQL2TA4" compressed="false" version="14.6.13" type="device">
+  <diagram id="6I0OCvxSQrVGMHxT2VVA" name="Page-1">
+    <mxGraphModel dx="942" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9HzRxViX81f2jjgR3CnR-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-4" target="cnxiwclnYiwpIDNbZDRj-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-4" target="cnxiwclnYiwpIDNbZDRj-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnxiwclnYiwpIDNbZDRj-4" value="" style="shape=mxgraph.flowchart.start_2;" parent="1" vertex="1">
+          <mxGeometry x="200" y="40" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-6" style="exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-5" target="cnxiwclnYiwpIDNbZDRj-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-7" style="exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-5" target="9HzRxViX81f2jjgR3CnR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-9" style="exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-5" target="cnxiwclnYiwpIDNbZDRj-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnxiwclnYiwpIDNbZDRj-5" value="Device" style="rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-10" style="exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-6" target="cnxiwclnYiwpIDNbZDRj-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnxiwclnYiwpIDNbZDRj-6" value="Game Object Type" style="rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-12" style="exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-7" target="9HzRxViX81f2jjgR3CnR-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnxiwclnYiwpIDNbZDRj-7" value="Game Object&#xa;Instance" style="rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="280" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-11" style="exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-9" target="cnxiwclnYiwpIDNbZDRj-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cnxiwclnYiwpIDNbZDRj-9" value="Pipeline" style="rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="200" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-2" value="Buffer" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9HzRxViX81f2jjgR3CnR-3" target="cnxiwclnYiwpIDNbZDRj-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9HzRxViX81f2jjgR3CnR-3" target="9HzRxViX81f2jjgR3CnR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-3" value="Draw" style="rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-5" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="100" y="430" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cnxiwclnYiwpIDNbZDRj-8" value="Pipeline" style="rounded=1;" parent="9HzRxViX81f2jjgR3CnR-5" vertex="1">
+          <mxGeometry y="10" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="9HzRxViX81f2jjgR3CnR-5" source="cnxiwclnYiwpIDNbZDRj-8" target="cnxiwclnYiwpIDNbZDRj-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" />
+              <mxPoint x="140" />
+              <mxPoint x="140" y="30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-8" target="9HzRxViX81f2jjgR3CnR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-17" value="One Pipeline instance per&lt;br&gt;Game Object &lt;b&gt;Type&lt;/b&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;rounded=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="520" y="190" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-18" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cnxiwclnYiwpIDNbZDRj-9" target="9HzRxViX81f2jjgR3CnR-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="510" y="310" as="sourcePoint" />
+            <mxPoint x="560" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-20" value="Pipeline comes&lt;br&gt;from Device" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;rounded=1;perimeterSpacing=0;labelPadding=0;direction=north;recursiveResize=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-23" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="9HzRxViX81f2jjgR3CnR-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="220" as="sourcePoint" />
+            <mxPoint x="290" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-24" value="One Pipeline instance&lt;br&gt;per &quot;Effect&quot;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;rounded=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" y="410" width="50" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9HzRxViX81f2jjgR3CnR-27" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="9HzRxViX81f2jjgR3CnR-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="445" as="sourcePoint" />
+            <mxPoint x="280" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

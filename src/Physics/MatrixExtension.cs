@@ -8,6 +8,13 @@ namespace VoxelEngine.Physics
       this Matrix4x4 matrix,
       Vector3 force,
       float mass
-    ) => matrix.Translation = matrix.Translation.GetAcceleration(force, mass);
+    ) => matrix.Translation = matrix.Translation.ApplyAccelerationFromForce(force, mass);
+
+    public static void ApplyAcceleration(
+      this Matrix4x4 matrix,
+      Vector3 force,
+      float mass,
+      float deltaTime
+    ) => matrix.Translation = matrix.Translation.ApplyAccelerationFromForce(force, mass, deltaTime);
   }
 }
