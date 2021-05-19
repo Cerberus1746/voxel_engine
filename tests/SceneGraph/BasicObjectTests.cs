@@ -1,32 +1,28 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 using VoxelEngine.SceneGraph;
+using Xunit;
 
-namespace Tests.VoxelEngine.SceneGraph
-{
-  public class SimpleGameObject : BasicObject
-  {
+namespace Tests.VoxelEngine.SceneGraph {
+  public class SimpleGameObject : BasicObject {
     public override void GraphicsFrame(float deltaT) => throw new NotImplementedException();
     public override void PhysicsFrame(float deltaT) => throw new NotImplementedException();
   }
 
-  [TestClass]
-  public class BasicObjectTests
-  {
+  public class BasicObjectTests {
     /// <summary>
     /// Object creation needs to behave asyncronously
     /// </summary>
-    [TestMethod]
+    [Fact]
     public async Task BasicObjectTest() {
       List<Task> objectCreationTask = new();
       List<SimpleGameObject> gameObjList = new();
 
-      for(int i = 0; i < 10; i++) {
+      for (int x = 0; x < 10; x++) {
         objectCreationTask.Add(Task.Run(() => {
-          for(int i = 0; i < 10; i++) {
+          for (int y = 0; y < 10; y++) {
             gameObjList.Add(new SimpleGameObject());
           }
         }));
@@ -34,7 +30,7 @@ namespace Tests.VoxelEngine.SceneGraph
 
       await Task.WhenAll(objectCreationTask.ToArray());
 
-      Assert.AreEqual(0, gameObjList.Distinct().Count());
+      Assert.Equal(100, gameObjList.Distinct().Count());
     }
   }
 }

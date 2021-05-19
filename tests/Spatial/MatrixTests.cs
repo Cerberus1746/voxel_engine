@@ -1,13 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Numerics;
 using VoxelEngine.Spatial;
+using Xunit;
 
-namespace Tests.VoxelEngine.Spatial
-{
-  [TestClass]
-  public class MatrixTests
-  {
-    [TestMethod]
+namespace Tests.VoxelEngine.Spatial {
+
+  public class MatrixTests {
+    [Fact]
     public void QuaternionRotation() {
       Matrix4x4 testMatrix;
       Quaternion testRot;
@@ -16,12 +14,12 @@ namespace Tests.VoxelEngine.Spatial
       rotVector = new(1, 1, 0);
       testRot = new(rotVector, 0);
       testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
-      Assert.AreEqual(testRot, testMatrix.GetQuaternion());
+      Assert.Equal(testRot, testMatrix.GetQuaternion());
 
       rotVector = new(0.5f, 0.5f, -0.5f);
       testRot = new(rotVector, 0);
       testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
-      Assert.AreEqual(testRot, testMatrix.GetQuaternion());
+      Assert.Equal(testRot, testMatrix.GetQuaternion());
     }
   }
 }
