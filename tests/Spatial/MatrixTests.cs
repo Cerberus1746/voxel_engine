@@ -5,7 +5,7 @@ using VoxelEngine.Spatial;
 namespace Tests.VoxelEngine.Spatial
 {
   [TestClass]
-  public class VectorTests
+  public class MatrixTests
   {
     [TestMethod]
     public void QuaternionRotation() {
@@ -16,12 +16,12 @@ namespace Tests.VoxelEngine.Spatial
       rotVector = new(1, 1, 0);
       testRot = new(rotVector, 0);
       testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
-      Assert.AreEqual(testRot, testMatrix.GetQuaternionRotation());
+      Assert.AreEqual(testRot, testMatrix.GetQuaternion());
 
       rotVector = new(0.5f, 0.5f, -0.5f);
       testRot = new(rotVector, 0);
       testMatrix = Matrix4x4.CreateFromQuaternion(testRot);
-      Assert.AreEqual(testRot, testMatrix.GetQuaternionRotation());
+      Assert.AreEqual(testRot, testMatrix.GetQuaternion());
     }
   }
 }
