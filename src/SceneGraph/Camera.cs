@@ -1,10 +1,8 @@
 using System;
 using System.Numerics;
 
-namespace VoxelEngine.SceneGraph
-{
-  class Camera : BasicObject
-  {
+namespace VoxelEngine.SceneGraph {
+  class Camera : BasicObject {
     public float fov = 1f;
     public float near = 1f;
     public float far = 1000f;

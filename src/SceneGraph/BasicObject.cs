@@ -135,7 +135,9 @@ namespace VoxelEngine.SceneGraph {
     #endregion
 
     #region ABSTRACT_METHODS
-    #region
+    public abstract void GraphicsFrame(float deltaT);
+    public abstract void PhysicsFrame(float deltaT);
+    #endregion
   }
 
   public class ObjectHasNoParentException : Exception { }
