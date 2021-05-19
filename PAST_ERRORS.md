@@ -20,7 +20,8 @@ this file should also contain, in each item the namespace, class and method the 
 Now, onto the bug list:
 
 # Past Bugs
-1. **VoxelEngine.Graphics.MainWindow.Run**
+1. **VoxelEngine.Graphics.MainWindow.Run** <a name="bug1"></a>
+
    **Issue**: *Error*: `InputSnapshot` is reportedly in `Veldrid.Sdl2` but no references to it is found.
 
    **Cause**: This error happened when `VoxelEngine.InputHandling` was using, by mistake, version `1.0.0`.
